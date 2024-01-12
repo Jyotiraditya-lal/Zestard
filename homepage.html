@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            position: relative;
         }
 
         header {
@@ -21,29 +23,195 @@
 
         nav {
             display: flex;
-            justify-content: space-around;
-            background-color: #333;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fbf8f8;
             padding: 10px;
         }
 
         nav a {
             text-decoration: none;
-            color: white;
+            color: black;
             padding: 10px;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
 
         nav a:hover {
-            background-color: #555;
+            background-color: grey;
         }
 
         #home-image {
-            width: 100%; 
-            height: auto; 
+            width: 100%;
+            height: 450px;
+            margin-bottom: 150px;
+        }
+
+        .right-options {
+            display: flex;
+            align-items: center;
+        }
+
+        .right-options img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-left: 15px;
+        }
+
+        .right-options img:hover {
+            background-color: #0b0b0b;
+            cursor: pointer;
+        }
+
+        .center {
+            position: absolute;
+            top: 105px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .center img {
+            display: inline-block;
+            height: 150px;
+        }
+
+        #para {
+            text-align: center;
+            color: grey;
+            font-family: Arial, sans-serif;
+            margin-bottom: 70px;
+            font-size: 20px;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            margin-bottom: 70px;
+        }
+
+        #leaf {
+            width: 150px;
+            height: 150px;
+        }
+
+        .aboveShop {
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .shop_header {
+            color: black;
+            font-weight: bolder;
+            margin: 10px 0;
+        }
+
+        .shop-light {
+            color: #808080;
+            margin: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            top: 150%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+        }
+
+        .product {
+            text-align: center;
+            width: 200px;
+            position: relative;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+
+        .add-to-cart-btn {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .arrow-left,
+        .arrow-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .arrow-left {
+            left: -30px;
+        }
+
+        .arrow-right {
+            right: -30px;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #4CAF50;
+            color: black;
+            padding: 20px;
+            position: absolute;
+            top: 200%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+        }
+
+        .footer img {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        .sections {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .section {
+            text-align: center;
+            width: 30%;
+            padding: 0 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            margin-bottom: 5px;
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -51,19 +219,105 @@
     </header>
 
     <nav>
-        <a href="#" id="shopLink">Shop</a>
-        <a href="#">About</a>
-        <a href="#">Greenery</a>
+        <div>
+            <a href="#" id="shopLink">Shop</a>
+            <a href="#">About</a>
+            <a href="#">The Greenery</a>
+        </div>
+        <div class="center">
+            <img src="luma leaf.png" alt="luma" id="luma">
+        </div>
+        <div class="right-options">
+            <img src="search.png" alt="search" id="search">
+            <img src="profile.jpg" alt="profile" id="profile">
+            <img src="cart.jpg" alt="cart" id="cart">
+        </div>
     </nav>
 
     <img src="Homepage.jpg" alt="Homepage Image" id="home-image">
 
+    <br />
+
+    <div id="para">Skincare as nature intended<br /> formulated without parabens, sulfates, harmful alcohols,<br /> synthetic dyes, artificial fragrance, animal products<br /> animal testing and other bad stuff
+    </div>
+
+    <div class="logo">
+        <img src="vegan.png" alt="vegan" id="vegan">
+        <img src="clean.jpg" alt="clean" id="clean">
+        <img src="skin.jpg" alt="skin" id="skin">
+        <img src="sustain.png" alt="sustain" id="sustain">
+        <img src="Broad.jpg" alt="Broad" id="broad">
+        <img src="nope.png" alt="none" id="nope">
+    </div>
+
+    <div class="aboveShop">
+        <img src="leaf.png" alt="leaf" id="leaf">
+        <p class="shop_header">Shop our skin-loving lineup</p>
+        <p class="shop-light">Skincare formulated for hydrated, nourished, and good-looking skin</p>
+    </div>
+
+    <div class="products">
+        <div class="product">
+            <div class="arrow-left">&#9665;</div>
+            <img src="product_image.jpg" alt="product-image" id="product">
+            <h2>Relief & Repair Moisturizer</h2>
+            <p>A moisturizer for dry and sensitive skin that seriously hydrates and smooths.</p>
+            <p>$19.99</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="afterglow.jpg" alt="afterglow" id="afterglow">
+            <h2>After Glow Serum</h2>
+            <p>A glow-inducing, antioxidant-infused serum that's gentle on the skin</p>
+            <p>$21.99</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <div class="arrow-right">&#9655;</div>
+            <img src="cleanSlate.jpg" alt="cleanSlate" id="cleanSlate">
+            <h2>Clean Slate Serum</h2>
+            <p>A purifying, oil-free serum that clears the way for great skin</p>
+            <p>$24.99</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img src="hydrated.jpg" alt="hydrated" id="hydrated">
+
+        <div class="sections">
+            <div class="section">
+                <h2>About</h2>
+                <p>Our Story</p>
+                <p>Our promises</p>
+                <p>Shipping/Returns</p>
+                <p>FAQs</p>
+            </div>
+
+            <div class="section">
+                <h2>More Info</h2>
+                <p>The Greenery</p>
+                <p>Skin Glossary</p>
+                <p>Terms of Use</p>
+                <p>Privacy policy</p>
+                <p>COA</p>
+            </div>
+
+            <div class="section">
+                <h2>Get in Touch</h2>
+                <p>Have a question? Want to say hello?<br />send us a message at<br /><strong>hello@lumaandleaf.com</strong></p>
+            </div>
+        </div>
+    </div>
+
     <script>
-        document.getElementById('shopLink').addEventListener('click', function() {
-            
+        document.getElementById('shopLink').addEventListener('click', function () {
             window.location.href = './Shop.html';
         });
     </script>
 
 </body>
+
 </html>

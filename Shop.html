@@ -10,32 +10,69 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            position: relative; /* Set the body to relative positioning */
         }
-
+    
         header {
             background-color: #4CAF50;
             padding: 15px;
             text-align: center;
             color: white;
         }
-
+    
         nav {
             display: flex;
-            justify-content: space-around;
-            background-color: #333;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fbf8f8;
             padding: 10px;
         }
-
+    
         nav a {
             text-decoration: none;
-            color: white;
+            color: black;
             padding: 10px;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
-
+    
         nav a:hover {
-            background-color: #555;
+            background-color: grey;
+        }
+    
+        #home-image {
+            width: 100%; 
+            height: 450px; 
+        }
+    
+        .right-options {
+            display: flex;
+            align-items: center;
+        }
+    
+        .right-options img {
+            width: 30px; 
+            height: 30px; 
+            border-radius: 50%; 
+            margin-left: 15px; 
+        }
+        
+        .right-options img:hover {
+            background-color: #0b0b0b; 
+            cursor: pointer; 
+        }
+    
+        .center {
+            position: absolute; 
+            top: 105px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+        }
+    
+        .center img {
+            display: inline-block;
+            height: 150px;
+           
         }
 
         #product-container {
@@ -103,9 +140,19 @@
     </header>
 
     <nav>
-        <a href="#" id="homepage">Homepage</a>
-        <a href="#">About</a>
-        <a href="#">Greenery</a>
+        <div>
+            <a href="#" id="homepage">Homepage</a>
+            <a href="#">About</a>
+            <a href="#">The Greenery</a>
+        </div>
+        <div class="center">
+            <img src="luma leaf.png" alt="luma" id="luma">
+        </div>
+        <div class="right-options">
+            <img src="search.png" alt="search" id="search">
+            <img src="profile.jpg" alt="profile" id="profile">
+            <img src="cart.jpg" alt="cart" id="cart">
+        </div>
     </nav>
 
     <div id="product-container">
